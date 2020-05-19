@@ -10,7 +10,7 @@ void Object_destroy(void *self)
     Object *obj = self;
     if (obj) {
         if(obj->description) {
-            free();
+            free(obj->description);
         }
         free(obj);
     }
@@ -27,7 +27,7 @@ int Object_init(void *self)
     return 1;
 }
 
-void *Object_attack(void *self, Direction direction)
+void *Object_move(void *self, Direction direction)
 {
     printf("You can't go that direction.\n");
     return NULL;
