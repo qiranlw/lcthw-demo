@@ -6,4 +6,4 @@ demo18: object.o
 
 clean:
 	rm -f demo??
-
+	rm -f *.o
